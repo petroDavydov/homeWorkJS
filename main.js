@@ -225,5 +225,40 @@ checkStorage(100, 130);
 checkStorage(200, 20);
 checkStorage(200, 150);
 checkStorage(150, 180);
-// ==========================
+
+
+
+// ===========26===============
+
+function checkPassword(password) {
+	const ADMIN_PASSWORD = "jqueryismyjam";
+	let message;
+	// Change code below this line
+	message = password === ADMIN_PASSWORD ? "Access is allowed" : "Access denied, wrong password!"
+
+	// Change code above this line
+	return message;
+}
+
+
+//   ==============27=====================
+
+
+function getSubscriptionPrice(type) {
+	let price;
+	// Change code below this line
+	switch (type) { // Change this line
+		case "starter": // Change this line
+			price = 0; // Change this line
+			break;
+		case "professional": // Change this line
+			price = 20; // Change this line
+			break;
+		case "organization": // Change this line
+			price = 50; // Change this line
+			break;
+	}
+	// Change code above this line
+	return price;
+}
 
