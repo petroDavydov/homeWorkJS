@@ -319,7 +319,7 @@ checkPassword("jqueryismyjam");
 function getShippingCost(country) {
 	let message;
 	switch (country) {
-		
+
 		case "China":
 			price = 100;
 			message = `Shipping to ${country} will cost ${price} credits`;
@@ -358,5 +358,40 @@ getShippingCost("Jamaica");
 getShippingCost("Sweden");
 
 
+// ==========30=====================
 
-// ==================================
+function getNameLength(name) {
+	const message = `Name ${name} is ${name.length} characters long`; // Change this line
+
+	return message;
+}
+
+getNameLength("Poly");
+getNameLength("Harambe");
+getNameLength("Billy");
+getNameLength("Joe");
+
+// ==========31===============
+
+const courseTopic = "JavaScript essentials";
+// Change code below this line
+
+const courseTopicLength = courseTopic.length;
+const firstElement = courseTopic[0];
+const lastElement = courseTopic[courseTopic.length - 1];
+
+// Change code above this line
+
+// =============32===================
+
+function getSubstring(string, length) {
+	const substring = string.slice(0, length); // Change this line
+
+	return(substring)
+	// console.log(substring);
+
+}
+getSubstring("Hello world", 3);
+getSubstring("Hello world", 6);
+getSubstring("Hello world", 8);
+getSubstring("Hello world", 11);
