@@ -151,6 +151,32 @@ makeTransaction(2000, 8, 10000);
 makeTransaction(500, 10, 5000);
 
 
+// =================20=========
+
+function checkStorage(available, ordered) {
+	let message;
+	// Change code below this line
+
+	if (ordered === 0) {
+		message = "There are no products in the order!";
+	} else if (ordered > available) {
+		message = "Your order is too large, there are not enough items in stock!";
+	} else {
+		message = "The order is accepted, our manager will contact you";
+	}
+
+	// Change code above this line
+	return message;
+}
+
+checkStorage(100, 50);
+checkStorage(100, 130);
+checkStorage(70, 0);
+checkStorage(200, 20);
+checkStorage(200, 250);
+checkStorage(150, 0);
+
+
 // ========21==
 
 function isNumberInRange(start, end, number) {
@@ -239,10 +265,7 @@ function checkPassword(password) {
 	// Change code above this line
 	return message;
 }
-
-
 //   ==============27=====================
-
 
 function getSubscriptionPrice(type) {
 	let price;
@@ -262,3 +285,78 @@ function getSubscriptionPrice(type) {
 	return price;
 }
 
+// ===========28==================
+
+function checkPassword(password) {
+	const ADMIN_PASSWORD = "jqueryismyjam";
+	let message;
+	// Change code below this line
+
+	switch (password) {
+		case null:
+			message = "Canceled by user!";
+			break;
+
+		case ADMIN_PASSWORD:
+			message = "Welcome!";
+			break;
+
+		default:
+			message = "Access denied, wrong password!"
+	}
+	// Change code above this line
+	console.log(message);
+}
+
+
+checkPassword("mangohackzor");
+checkPassword(null);
+checkPassword("polyhax");
+checkPassword("jqueryismyjam");
+
+// ===========29=====================
+
+function getShippingCost(country) {
+	let message;
+	switch (country) {
+		
+		case "China":
+			price = 100;
+			message = `Shipping to ${country} will cost ${price} credits`;
+			break;
+
+		case "Chile":
+			price = 250;
+			message = `Shipping to ${country} will cost ${price} credits`;
+			break;
+
+		case "Australia":
+			price = 170;
+			message = `Shipping to ${country} will cost ${price} credits`;
+			break;
+
+		case "Jamaica":
+			price = 120;
+			message = `Shipping to ${country} will cost ${price} credits`;
+			break;
+
+		default:
+			message = "Sorry, there is no delivery to your country"
+
+	}
+
+	// Change code above this line
+	// return message;
+	console.log(message)
+
+};
+getShippingCost("Australia");
+getShippingCost("Germany");
+getShippingCost("China");
+getShippingCost("Chile");
+getShippingCost("Jamaica");
+getShippingCost("Sweden");
+
+
+
+// ==================================
