@@ -210,30 +210,20 @@ getDiscount(5000);
 getDiscount(20000);
 getDiscount(50000);
 
-//   =============25=============
+//   =============25=answer============
 
 function checkStorage(available, ordered) {
 	let message;
-	// Change code below this line
-	message = ordered > available ? message = "Not enough goods in stock!" : "The order is placed, the manager will contact you"
-	// if (ordered > available) {
-	//   message = "Not enough goods in stock!";
-	// } else {
-	//   message = "The order is placed, the manager will contact you";
-	// }
-
+	// Change code below this line  
+	message = ordered > available ? "Not enough goods in stock!" : "The order is accepted, our manager will contact you";
 	// Change code above this line
-	console.log(message);
+	return message;
 }
-
-// message = ordered > available ? message = "Not enough goods in stock!" : "The order is placed, the manager will contact you"
-
-
 
 checkStorage(100, 50);
 checkStorage(100, 130);
 checkStorage(200, 20);
 checkStorage(200, 150);
 checkStorage(150, 180);
-
+// ==========================
 
