@@ -407,7 +407,7 @@ function formatMessage(message, maxLength) {
 	if (message.length > maxLength) {
 		result = message.slice(0, maxLength) + "..."
 	} else {
-		message
+		result = message
 	}
 
 	/// Change code above this line
@@ -434,5 +434,60 @@ normalizeInput("Hello world");
 normalizeInput("This ISN'T SpaM");
 normalizeInput("Big SALE");
 
-// ==========================
+// ==========35================
+
+// Функция checkName(fullname, name) принимает два параметра и возвращает буль true или false - результат проверки вхождения подстроки name в строку fullname.
+
+// fullname - полное имя состоящее из двух слов (имени и фамилии) разделённых пробелом.
+// name - имя для проверки вхождения в полное имя.
+// Присвой переменной result выражение проверки вхождения имени (параметр name), в полное имя (параметр fullname). Пусть функция строго относится к регистру букв, то есть «Петя» и «петя» для неё разные имена.
+
+function checkForName(fullName, name) {
+	const result = fullName.includes(name); // Change this line
+	return result;
+}
+
+//    ================36=ternarnik=============
+
+function checkForSpam(message) {
+	let result;
+	// Change code below this line
+
+	result = message.toLowerCase().includes("spam") || message.toLowerCase().includes("sale") ? message = true : message = false
+
+	// Change code above this line
+	// return result;
+	console.log(result);
+}
+checkForSpam("Latest technology news");
+checkForSpam("JavaScript weekly newsletter");
+checkForSpam("Get best sale offers now!");
+checkForSpam("Amazing SalE, only tonight!");
+checkForSpam("Trust me, this is not a spam message");
+checkForSpam("Get rid of sPaM emails. Our book in on sale!");
+checkForSpam("[SPAM] How to earn fast money?");
+
+// ==========36==============================
+
+function checkForSpam(message) {
+	let result;
+
+	if (message.toLowerCase().includes("spam") || message.toLowerCase().includes("sale")) {
+		result = true;
+	} else {
+		result = false;
+	}
+	// Change code above this line
+	// return result;
+
+	console.log(result);
+}
+checkForSpam("Latest technology news");
+checkForSpam("JavaScript weekly newsletter");
+checkForSpam("Get best sale offers now!");
+checkForSpam("Amazing SalE, only tonight!");
+checkForSpam("Trust me, this is not a spam message");
+checkForSpam("Get rid of sPaM emails. Our book in on sale!");
+checkForSpam("[SPAM] How to earn fast money?");
+
 
