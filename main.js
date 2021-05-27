@@ -490,4 +490,21 @@ checkForSpam("Trust me, this is not a spam message");
 checkForSpam("Get rid of sPaM emails. Our book in on sale!");
 checkForSpam("[SPAM] How to earn fast money?");
 
+// ============Марта===========
+
+// function checkForSpam(message) {
+//   let result;
+//   // Change code below this line
+// result = message.toLowerCase('spam');
+// result = message.toLowerCase('sale');
+// if (message.toLowerCase().includes('spam') || message.toLowerCase().includes('sale')){
+// result = true;
+// } else {
+//  result = false;
+// }
+//   // Change code above this line
+//   console.log(result);
+// }
+
+
 
