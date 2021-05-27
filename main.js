@@ -395,4 +395,44 @@ getSubstring("Hello world", 3);
 getSubstring("Hello world", 6);
 getSubstring("Hello world", 8);
 getSubstring("Hello world", 11);
-// ==============================
+
+
+// ===========33===================
+function formatMessage(message, maxLength) {
+	let result;
+	// Change code below this line
+
+	result = message.length > maxLength ? message.slice(0, maxLength) + "..." : message
+
+	if (message.length > maxLength) {
+		result = message.slice(0, maxLength) + "..."
+	} else {
+		message
+	}
+
+	/// Change code above this line
+	// return result;
+	console.log(result)
+}
+formatMessage("Curabitur ligula sapien", 16);
+formatMessage("Curabitur ligula sapien", 23);
+formatMessage("Vestibulum facilisis purus nec", 20);
+formatMessage("Vestibulum facilisis purus nec", 30);
+formatMessage("Nunc sed turpis a felis in nunc fringilla", 15);
+formatMessage("Nunc sed turpis a felis in nunc fringilla", 41);
+
+// ================34=========
+
+function normalizeInput(input) {
+	const normalizedInput = input.toLowerCase(); // Change this line
+
+	// return (normalizedInput);
+	console.log(normalizedInput);
+}
+
+normalizeInput("Hello world");
+normalizeInput("This ISN'T SpaM");
+normalizeInput("Big SALE");
+
+// ==========================
+
