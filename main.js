@@ -505,6 +505,69 @@ checkForSpam("[SPAM] How to earn fast money?");
 //   // Change code above this line
 //   console.log(result);
 // }
+// ===============================
 
+// ЗАДАЧА
+// Написать программу которая конвертирует минуты в формат HH:MM
+
+// 70 покажет 01:10
+// 450 покажет 07:30
+// 1441 покажет 24:1
+
+// 1) переменние
+// 2) цикл
+// 3) деление по модулю
+
+
+// let hour = 0;
+// let minute;
+// let count;
+for (i = 0; i % 10; i += 1) {
+	if (Number(i % 1 && i % 2)) {
+		let hour = Number(i);
+		console.log(Number(i))
+	}
+}
+
+
+
+
+// =======DONE===========
+// Написать програму которая конвертирует минуты в формат HH:MM
+
+// 70 покажет 01:10
+// 450 покажет 07:30
+// 1441 покажет 24:1
+
+// =====1 решение=========
+
+
+// let x = 70;
+// let hour = x / 60;
+// let minutes = x % 60;
+// for (let i = 1; i <= x; i += 1) {
+//     console.log(`Now ${Math.floor(hour)}:${minutes}`)
+// }
+
+// ==========2 решение=======
+
+// for (let i = 0; i <= 1441; i += 1) {
+// 	let hour = i / 60;
+// 	let minutes = i % 60;
+// 	if (i === 70) {
+
+// 		console.log(`Now ${Math.floor(hour)}:${minutes}`)
+
+// 	} else if (i === 450) {
+// 		console.log(`Now ${Math.floor(hour)}:${minutes}`)
+
+// 	} else if (i === 1441) {
+// 		console.log(`Now ${Math.floor(hour)}:${minutes}`)
+// 		break
+// 	}
+
+// }
+
+// =========DONE================
 
 
