@@ -405,47 +405,118 @@
 
 // =ternarnik=
 
-const string = 'JavaScript';
-const letters = string.split('');
-let invertString = '';
+// const string = 'JavaScript';
+// const letters = string.split('');
+// let invertString = '';
 
-console.log(letters);
+// console.log(letters);
 
-for (const letter of letters) {
-	console.log(letter);
+// for (const letter of letters) {
+// 	console.log(letter);
 
-	const isEqual = letter === letter.toLocaleLowerCase();
+// 	const isEqual = letter === letter.toLocaleLowerCase();
 
-	invertString += isEqual ? letter.toUpperCase() : letter.toLocaleLowerCase();
-}
+// 	invertString += isEqual ? letter.toUpperCase() : letter.toLocaleLowerCase();
+// }
 
-console.log('invertString: ', invertString);
+// console.log('invertString: ', invertString);
 
 // ===============
 
+// Должно получиться top-ten-benefits-of-react-framework
+
+// const title = 'Top 10 benefits of react framework';
+
+// const normalizeTitle = title.toLocaleLowerCase();
+// console.log(normalizeTitle);
+
+// const words = normalizeTitle.split(' ');
+// console.log(words);
+
+// const slug = words.join('-')
+// console.log(slug);
+
+// =chainning=
+
+// const lummox = title.toLocaleLowerCase().split(' ').join('-')
+// console.log(lummox);
+
+// визивается на методде а не на масиве
+
+// ===========================
+
+// сумма елементов 2 масивов
+
+// const array1 = [5, 10, 15, 20];
+// const array2 = [10, 20, 30];
+// let total = 0;
+
+// const numbers = array1.concat(array2);
+
+// for (const number of numbers) {
+// 	total += number;
+
+// }
+// console.log(total);
+// console.log(numbers);
+
+
+// ================================
+
+// Колекция карточек в trello, метод splice()
+
+const cards = [
+	'Card-1',
+	'Card-2',
+	'Card-3',
+	'Card-4',
+	'Card-5',
+];
+
+console.table(cards);
+
+
+// удаление по индексу indexOf()
+
+// const cardToRemove = 'Card-3';
+// const index = cards.indexOf(cardToRemove);
+// console.table(index);
 
 
 
+// console.log(cards.splice(index, 1));
+
+
+// console.table(cards);
+
+
+// добавление по индексу
+
+
+// const cardToInsert = 'Card-43';
+// const index = 3;
+
+// cards.splice(index, 0, cardToInsert);
+
+// console.table(cards)
+
+// обновление по индексу
+
+const cardToUpdate = 'Card-4';
+const index = cards.indexOf(cardToUpdate)
+
+console.log(index);
 
 
 
+cards.splice(index, 1, "new card-4");
+
+console.table(cards);
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// ================================
+// ===================================
+// ======================================
 
 
 
