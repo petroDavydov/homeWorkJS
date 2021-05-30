@@ -153,28 +153,28 @@ makeTransaction(500, 10, 5000);
 
 // =================20=========
 
-// function checkStorage(available, ordered) {
-// 	let message;
-// 	// Change code below this line
+function checkStorage(available, ordered) {
+	let message;
+	// Change code below this line
 
-// 	if (ordered === 0) {
-// 		message = "There are no products in the order!";
-// 	} else if (ordered > available) {
-// 		message = "Your order is too large, there are not enough items in stock!";
-// 	} else {
-// 		message = "The order is accepted, our manager will contact you";
-// 	}
+	if (ordered === 0) {
+		message = "There are no products in the order!";
+	} else if (ordered > available) {
+		message = "Your order is too large, there are not enough items in stock!";
+	} else {
+		message = "The order is accepted, our manager will contact you";
+	}
 
-// 	// Change code above this line
-// 	return message;
-// }
+	// Change code above this line
+	return message;
+}
 
-// checkStorage(100, 50);
-// checkStorage(100, 130);
-// checkStorage(70, 0);
-// checkStorage(200, 20);
-// checkStorage(200, 250);
-// checkStorage(150, 0);
+checkStorage(100, 50);
+checkStorage(100, 130);
+checkStorage(70, 0);
+checkStorage(200, 20);
+checkStorage(200, 250);
+checkStorage(150, 0);
 
 
 // ========21==
@@ -239,19 +239,19 @@ getDiscount(50000);
 
 //   =============25=answer============
 
-// function checkStorage(available, ordered) {
-// 	let message;
-// 	// Change code below this line  
-// 	message = ordered > available ? "Not enough goods in stock!" : "The order is accepted, our manager will contact you";
-// 	// Change code above this line
-// 	return message;
-// }
+function checkStorage(available, ordered) {
+	let message;
+	// Change code below this line  
+	message = ordered > available ? "Not enough goods in stock!" : "The order is accepted, our manager will contact you";
+	// Change code above this line
+	return message;
+}
 
-// checkStorage(100, 50);
-// checkStorage(100, 130);
-// checkStorage(200, 20);
-// checkStorage(200, 150);
-// checkStorage(150, 180);
+checkStorage(100, 50);
+checkStorage(100, 130);
+checkStorage(200, 20);
+checkStorage(200, 150);
+checkStorage(150, 180);
 
 
 
@@ -288,75 +288,75 @@ function getSubscriptionPrice(type) {
 
 // ===========28==================
 
-// function checkPassword(password) {
-// 	const ADMIN_PASSWORD = "jqueryismyjam";
-// 	let message;
-// 	// Change code below this line
+function checkPassword(password) {
+	const ADMIN_PASSWORD = "jqueryismyjam";
+	let message;
+	// Change code below this line
 
-// 	switch (password) {
-// 		case null:
-// 			message = "Canceled by user!";
-// 			break;
+	switch (password) {
+		case null:
+			message = "Canceled by user!";
+			break;
 
-// 		case ADMIN_PASSWORD:
-// 			message = "Welcome!";
-// 			break;
+		case ADMIN_PASSWORD:
+			message = "Welcome!";
+			break;
 
-// 		default:
-// 			message = "Access denied, wrong password!"
-// 	}
-// 	// Change code above this line
-// 	console.log(message);
-// }
+		default:
+			message = "Access denied, wrong password!"
+	}
+	// Change code above this line
+	console.log(message);
+}
 
 
-// checkPassword("mangohackzor");
-// checkPassword(null);
-// checkPassword("polyhax");
-// checkPassword("jqueryismyjam");
+checkPassword("mangohackzor");
+checkPassword(null);
+checkPassword("polyhax");
+checkPassword("jqueryismyjam");
 
 // ===========29=====================
 
-// function getShippingCost(country) {
-// 	let message;
-// 	switch (country) {
+function getShippingCost(country) {
+	let message;
+	switch (country) {
 
-// 		case "China":
-// 			price = 100;
-// 			message = `Shipping to ${country} will cost ${price} credits`;
-// 			break;
+		case "China":
+			price = 100;
+			message = `Shipping to ${country} will cost ${price} credits`;
+			break;
 
-// 		case "Chile":
-// 			price = 250;
-// 			message = `Shipping to ${country} will cost ${price} credits`;
-// 			break;
+		case "Chile":
+			price = 250;
+			message = `Shipping to ${country} will cost ${price} credits`;
+			break;
 
-// 		case "Australia":
-// 			price = 170;
-// 			message = `Shipping to ${country} will cost ${price} credits`;
-// 			break;
+		case "Australia":
+			price = 170;
+			message = `Shipping to ${country} will cost ${price} credits`;
+			break;
 
-// 		case "Jamaica":
-// 			price = 120;
-// 			message = `Shipping to ${country} will cost ${price} credits`;
-// 			break;
+		case "Jamaica":
+			price = 120;
+			message = `Shipping to ${country} will cost ${price} credits`;
+			break;
 
-// 		default:
-// 			message = "Sorry, there is no delivery to your country"
+		default:
+			message = "Sorry, there is no delivery to your country"
 
-// 	}
+	}
 
-// 	// Change code above this line
-// 	// return message;
-// 	console.log(message)
+	// Change code above this line
+	// return message;
+	console.log(message)
 
-// };
-// getShippingCost("Australia");
-// getShippingCost("Germany");
-// getShippingCost("China");
-// getShippingCost("Chile");
-// getShippingCost("Jamaica");
-// getShippingCost("Sweden");
+};
+getShippingCost("Australia");
+getShippingCost("Germany");
+getShippingCost("China");
+getShippingCost("Chile");
+getShippingCost("Jamaica");
+getShippingCost("Sweden");
 
 
 // ==========30=====================
@@ -450,46 +450,46 @@ function checkForName(fullName, name) {
 
 //    ================36=ternarnik=============
 
-// function checkForSpam(message) {
-// 	let result;
-// 	// Change code below this line
+function checkForSpam(message) {
+	let result;
+	// Change code below this line
 
-// 	result = message.toLowerCase().includes("spam") || message.toLowerCase().includes("sale") ? message = true : message = false
+	result = message.toLowerCase().includes("spam") || message.toLowerCase().includes("sale") ? message = true : message = false
 
-// 	// Change code above this line
-// 	// return result;
-// 	console.log(result);
-// }
-// checkForSpam("Latest technology news");
-// checkForSpam("JavaScript weekly newsletter");
-// checkForSpam("Get best sale offers now!");
-// checkForSpam("Amazing SalE, only tonight!");
-// checkForSpam("Trust me, this is not a spam message");
-// checkForSpam("Get rid of sPaM emails. Our book in on sale!");
-// checkForSpam("[SPAM] How to earn fast money?");
+	// Change code above this line
+	// return result;
+	console.log(result);
+}
+checkForSpam("Latest technology news");
+checkForSpam("JavaScript weekly newsletter");
+checkForSpam("Get best sale offers now!");
+checkForSpam("Amazing SalE, only tonight!");
+checkForSpam("Trust me, this is not a spam message");
+checkForSpam("Get rid of sPaM emails. Our book in on sale!");
+checkForSpam("[SPAM] How to earn fast money?");
 
 // ==========36==============================
 
-// function checkForSpam(message) {
-// 	let result;
+function checkForSpam(message) {
+	let result;
 
-// 	if (message.toLowerCase().includes("spam") || message.toLowerCase().includes("sale")) {
-// 		result = true;
-// 	} else {
-// 		result = false;
-// 	}
-// 	// Change code above this line
-// 	// return result;
+	if (message.toLowerCase().includes("spam") || message.toLowerCase().includes("sale")) {
+		result = true;
+	} else {
+		result = false;
+	}
+	// Change code above this line
+	// return result;
 
-// 	console.log(result);
-// }
-// checkForSpam("Latest technology news");
-// checkForSpam("JavaScript weekly newsletter");
-// checkForSpam("Get best sale offers now!");
-// checkForSpam("Amazing SalE, only tonight!");
-// checkForSpam("Trust me, this is not a spam message");
-// checkForSpam("Get rid of sPaM emails. Our book in on sale!");
-// checkForSpam("[SPAM] How to earn fast money?");
+	console.log(result);
+}
+checkForSpam("Latest technology news");
+checkForSpam("JavaScript weekly newsletter");
+checkForSpam("Get best sale offers now!");
+checkForSpam("Amazing SalE, only tonight!");
+checkForSpam("Trust me, this is not a spam message");
+checkForSpam("Get rid of sPaM emails. Our book in on sale!");
+checkForSpam("[SPAM] How to earn fast money?");
 
 // ============Марта===========
 
