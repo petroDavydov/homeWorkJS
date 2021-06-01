@@ -1138,27 +1138,66 @@
 
 // =25=
 
-function getCommonElements(array1, array2) {
+// function getCommonElements(array1, array2) {
+// 	// Change code below this line
+// 	const unique = [];
+
+// 	for (let i = 0; i < array1.length; i += 1) {
+// 		if (array2.includes(array1[i])) {
+// 			unique.push(array1[i])
+// 		}
+// 	}
+
+// 	return unique;
+// 	// Change code above this line
+// }
+
+// console.log(getCommonElements([1, 2, 3], [2, 4]));
+// console.log(getCommonElements([1, 2, 3], [2, 1, 17, 19]));
+// console.log(getCommonElements([24, 12, 27, 3], [12, 8, 3, 36, 27]));
+
+
+// =26=
+
+function calculateTotalPrice(order) {
+	let total = 0;
 	// Change code below this line
-	let unique = [];
-
-	for (let i = 0; i < array2.length; i += 1){
-		if (array1.incldes(array2[i])){
-			unique.push(i)
-		}
+  
+	for (let i = 0; i < order.length; i += 1) {
+	  total += order[i];
 	}
-
-
-
-
-return unique
+  
 	// Change code above this line
-}
+	return total;
+  }
+  
+console.length(calculateTotalPrice([12, 85, 37, 4]));
+console.log(calculateTotalPrice([164, 48, 291]));
+console.log(calculateTotalPrice([412, 371, 94, 63, 176]));
 
 
-console.log(getCommonElements([1, 2, 3], [2, 4]));
-console.log(getCommonElements([1, 2, 3], [2, 1, 17, 19]));
-console.log(getCommonElements([24, 12, 27, 3], [12, 8, 3, 36, 27]));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
