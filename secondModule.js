@@ -1039,28 +1039,22 @@
 
 // =21=
 
-// function findLongestWord(string) {
-// 	// Change code below this line
-// 	let splitLine = string.split(' ');
-// 	let longestWord = 0;
-// 	let word = null;
-// 	for (let i = 0; i < splitLine.length; i += 1) {
-// 		if (splitLine[i].length > longestWord) {
-// 			longestWord = splitLine[i].length;
-// 			word = splitLine[i]
-// 		}
-// 	}
+function findLongestWord(string) {
+	// Change code below this line
+	let splitLine = string.split(' ');
+	let longestWord = ' ';
+	for (let i = 0; i < splitLine.length; i += 1) {
+		if (splitLine[i].length > longestWord.length) {
+			longestWord = splitLine[i];
+		}
+	}
+	return longestWord;
+	// Change code above this line
+}
 
-// return word;
-// console.log (longestWord);
-// Change code above this line
-// }
-
-
-
-// console.log(findLongestWord("The quick brown fox jumped over the lazy dog"));
-// console.log(findLongestWord("Google do a roll"));
-// console.log(findLongestWord("May the force be with you"));
+console.log(findLongestWord("The quick brown fox jumped over the lazy dog"));
+console.log(findLongestWord("Google do a roll"));
+console.log(findLongestWord("May the force be with you"));
 
 
 // =21-второй вариант=
@@ -1283,21 +1277,21 @@
 
 // =32=
 
-return array.includes(value) ? true : false
-function includes(array, value) {
-	// Change code below this line
-	for (let num of array) {
-		if (num === value) {
-			return true
-		}
-	}
-	return false
-	// Change code above this line
-}
+// return array.includes(value) ? true : false
+// function includes(array, value) {
+// 	// Change code below this line
+// 	for (let num of array) {
+// 		if (num === value) {
+// 			return true
+// 		}
+// 	}
+// 	return false
+// 	// Change code above this line
+// }
 
 
-console.log(includes([1, 2, 3, 4, 5], 3));
-console.log(includes([1, 2, 3, 4, 5], 17));
-console.log(includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Jupiter"));
-console.log(includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Uranus"));
+// console.log(includes([1, 2, 3, 4, 5], 3));
+// console.log(includes([1, 2, 3, 4, 5], 17));
+// console.log(includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Jupiter"));
+// console.log(includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Uranus"));
 
