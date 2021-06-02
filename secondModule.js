@@ -1295,3 +1295,4 @@ console.log(findLongestWord("May the force be with you"));
 // console.log(includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Jupiter"));
 // console.log(includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Uranus"));
 
+// console.log(Boolean(10>9))
