@@ -1039,22 +1039,22 @@
 
 // =21=
 
-function findLongestWord(string) {
-	// Change code below this line
-	let splitLine = string.split(' ');
-	let longestWord = ' ';
-	for (let i = 0; i < splitLine.length; i += 1) {
-		if (splitLine[i].length > longestWord.length) {
-			longestWord = splitLine[i];
-		}
-	}
-	return longestWord;
-	// Change code above this line
-}
+// function findLongestWord(string) {
+// 	// Change code below this line
+// 	let splitLine = string.split(' ');
+// 	let longestWord = ' ';
+// 	for (let i = 0; i < splitLine.length; i += 1) {
+// 		if (splitLine[i].length > longestWord.length) {
+// 			longestWord = splitLine[i];
+// 		}
+// 	}
+// 	return longestWord;
+// 	// Change code above this line
+// }
 
-console.log(findLongestWord("The quick brown fox jumped over the lazy dog"));
-console.log(findLongestWord("Google do a roll"));
-console.log(findLongestWord("May the force be with you"));
+// console.log(findLongestWord("The quick brown fox jumped over the lazy dog"));
+// console.log(findLongestWord("Google do a roll"));
+// console.log(findLongestWord("May the force be with you"));
 
 
 // =21-второй вариант=
