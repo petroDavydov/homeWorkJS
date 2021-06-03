@@ -286,17 +286,58 @@
 
 //* Операция rest собирает все оставшиеся аргументы и поэтому должна идти последней в подписи функции, иначе будет ошибка.
 
-const add = function (value, name, ...args) {
-	console.log(value);
-	console.log(name);
-	console.log(args);
+// const add = function (value, name, ...args) {
+// 	console.log(value);
+// 	console.log(name);
+// 	console.log(args);
 
-};
+// };
 
-add(10, 'one:', 1, 2, 3)
-add(15, 'two:', 1, 2, 3, 4, 5)
+// add(10, 'one:', 1, 2, 3)
+// add(15, 'two:', 1, 2, 3, 4, 5)
+
+//! Деструктуризация
+
+// const hotel = {
+// 	name: "Hotel one",
+// 	stars: 5,
+// 	capacity: 100,
+// };
+
+// const { name = "Hotel two", stars = 5, status = "empty" } = hotel;
+// console.log(name, stars, status); //Hotel one 5 empty
 
 
+// const { name: hotelName, stars, status: HotelStatus = 'empty' } = hotel;
+// console.log(hotel);//{name: "Hotel one", stars: 5, capacity: 100}
+ 
+
+//*Используя операцию ... (rest) можно делать частичную деструктуризацию, взяв из объекта необходимые поля, а остальное собрать в переменную под именем rest (имя переменной произвольное), это будет объект с теми полями, которые мы явно не деструктуризировали в переменные.
+
+// const { name, ...rest } = hotel;
+// console.log(hotel);//{name: "Hotel one", stars: 5, capacity: 100}
+// console.log(name);//Hotel one
+// console.log(rest);//{stars: 5, capacity: 100}
+
+//! Деструктуризация масивов
+
+const rgba = [200, 255, 100];
+// ======variant======
+// let red, green, blue;
+// [red, green, blue] = rgba;
+// =====variant======
+// const [red, green, blue] = rgba;
+
+// =======varian more than in array======
+const [red, green, blue, alfa = 0.3] = rgba;
+console.log(`Red: ${red}, Green: ${green}, Blue: ${blue} Alfa:${alfa}`);//Red: 200, Green: 255, Blue: 100 Alfa:0.3
+
+
+// =======varian more than in array======
+
+// const [red, green, blue] = rgba;
+
+// console.log(`Red: ${red}, Green: ${green}, Blue: ${blue} `);//Red: 200, Green: 255, Blue: 100 
 
 
 
