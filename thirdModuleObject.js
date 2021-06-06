@@ -430,11 +430,11 @@
 
 //! Перебор
 
-const feedback = {
-  good: 5,
-  neutral: 10,
-  bad: 3,
-};
+// const feedback = {
+//   good: 5,
+//   neutral: 10,
+//   bad: 3,
+// };
 
 // let totalFeedBack = 0;
 
@@ -498,13 +498,13 @@ const feedback = {
 //   { name: "Poly", online: true },
 //   { name: "Ajax", online: false },
 // ];
-// console.table(friends);
+// // console.table(friends);
 
 // const findFriendByName = function (allFriends, friendName) {
 //   for (const friend of allFriends) {
-//     console.log(friend);
+//     // console.log(friend);
 //     // console.log(friend.name);
-//     console.log(friend.name);
+//     // console.log(friend.name);
 
 //     if (friend.name === friendName) {
 //       return " Find our Friend!!!";
@@ -624,12 +624,655 @@ const feedback = {
 
 //*Задача : КОЛИЧЕСТВО СВОЙСТВ В ОБЬЕКТЕ
 
-const x = {
-	a: 1,
-	b: 2,
-	c: 43,
-	d: 56,
-	
-};
-  console.log(Object.keys(x));
-  console.log(Object.keys(x).length);
+// const x = {
+// 	a: 1,
+// 	b: 2,
+// 	c: 43,
+// 	d: 56,
+
+// };
+//   console.log(Object.keys(x));
+//   console.log(Object.keys(x).length);
+
+//! Деструктуризация обьекта
+
+// const person = {
+//   name: "Igor",
+//   //   serName: "Panchenko",
+//   age: 35,
+//   car: "Lexus",
+//   musikLike: "Rock",
+// };
+
+// // const { name, serName, age, car, musikLike } = person;
+
+// const { name, serName: NIK = "User nik", age, car, musikLike } = person; //переименование через двоеточие, дефольное значение через равно.
+
+// console.log(
+//   name,
+//   //   serName,
+//   NIK,
+//   age,
+//   car,
+//   musikLike
+//   //   `Your name ${name} sername ${serName},
+//   //    you are ${age} years old. Your car ${car}
+//   //     & you like ${musikLike} musik `
+// );
+
+//! Object.entries()- usecase from video
+
+// const authors = {
+//   kiwi: 4,
+//   poly: 5,
+//   ajax: 6,
+//   mango: 8,
+// };
+
+// const entries = Object.entries(authors);
+
+// console.log(entries);
+
+// for (const [name, rating] of entries) {
+//   console.log(name, rating);
+// };
+
+//! обьект настроек
+
+// const showProfileInfo = (userProfile) => {
+//   console.table(userProfile);
+// };
+
+// const person = {
+//   name: "Igor",
+//   serName: "Panchenko",
+//   age: 35,
+//   car: "Lexus",
+//   musikLike: "Rock",
+//   stats: {
+//     folowers: 100,
+//     views: 100,
+//     likes: 30,
+//   },
+// };
+
+// showProfileInfo(person);
+
+//! Работа с колекцией товаров в корзине
+//! Работа с колекцией товаров в корзине
+//! Работа с колекцией товаров в корзине
+//! Работа с колекцией товаров в корзине
+
+//*
+/**
+ * - getItems()
+ * - add(product)
+ * - remove(productName)
+ * - clear()
+ * - countTotalPrice()
+ * - increaseQuantity(productName)
+ * - decreaseQuantity(productName)
+ *
+ * {name: 'tomato', price: 50}
+ * {name: 'grapes', price: 50}
+ * {name: 'lemon', price: 50}
+ * {name: 'strawberries', price: 50} *
+ */
+
+// const cart = {
+//   items: [],
+//   getItems() {
+//     return this.items;
+//   },
+//   add(product) {
+//     for (const item of this.items) {
+//       if (item.name === product.name) {
+//         item.quantity += 1;
+//         return;
+//       }
+//     }
+
+//     const newProduct = {
+//       ...product,
+//       quantity: 1,
+//     };
+//     this.items.push(newProduct);
+//   },
+
+//   remove(productName) {
+//     const { items } = this;
+
+//     for (let i = 0; i < items.length; i += 1) {
+//       const item = items[i];
+
+//       if (productName === item.name) {
+//         console.log("Find product: ", productName);
+//         console.log("index: ", i);
+
+//         items.splice(i, 1);
+//       }
+//     }
+//   },
+//   clear() {
+//     this.items = [];
+//   },
+
+//   countTotalPrice() {
+//     const { items } = this;
+//     let total = 0;
+//     for (const { price, quantity } of items) {
+//       total += price * quantity;
+//     }
+//     return total;
+//   },
+//   increaseQuantity(productName) {},
+//   decreaseQuantity(productName) {},
+// };
+
+// console.log(cart.getItems());
+
+// cart.add({ name: "tomato", price: 50 });
+// cart.add({ name: "lemon", price: 60 });
+// cart.add({ name: "lemon", price: 60 });
+// cart.add({ name: "strawberries", price: 110 });
+// cart.add({ name: "strawberries", price: 110 });
+// cart.add({ name: "strawberries", price: 110 });
+
+// console.table(cart.getItems());
+// // ==
+// console.log(("Total: ", cart.countTotalPrice()));
+// // ==
+
+// // ==
+// cart.remove("tomato");
+// console.table(cart.getItems());
+// // ==
+
+// cart.clear();
+// console.log(cart.getItems());
+// // ==
+
+// // cart.increaseQuantity()
+// // console.log(cart.getItems());
+
+//*
+//! Работа с колекцией товаров в корзине
+//! Работа с колекцией товаров в корзине
+//! Работа с колекцией товаров в корзине
+//! Работа с колекцией товаров в корзине
+// ================================================================================================================================================================================================================================================================================================================================
+
+//! ЗАДАЧИ ПО БОТУ  МОДУЛЬ № 3
+
+// = 10=
+
+// const apartment = {
+// 	descr: "Spacious apartment in the city center",
+// 	rating: 4,
+// 	price: 2153,
+//   };
+//   const keys = [];
+//   const values = [];
+//   // Change code below this line
+//   for (const key in apartment) {
+// 	// Change code below this line
+
+// 	keys.push(key);
+// 	values.push(apartment[key]);
+
+// 	// Change code above this line
+//   }
+
+// =11=
+
+// const keys = [];
+// const values = [];
+// const advert = {
+//   service: "apt",
+// };
+// const apartment = Object.create(advert);
+// apartment.descr = "Spacious apartment in the city center";
+// apartment.rating = 4;
+// apartment.price = 2153;
+
+// for (const key in apartment) {
+//   // Change code below this line
+//   if (apartment.hasOwnProperty(key)){
+
+//   keys.push(key);
+//   values.push(apartment[key]);
+//
+//   }
+//   // Change code above this line
+// }
+
+// =12=
+
+// function countProps(object) {
+//   let propCount = 0;
+//   // Change code below this line
+//   for (const item in object) {
+//     if (object.hasOwnProperty(item)) {
+//       propCount += 1;
+//     }
+//   }
+
+//   // Change code above this line
+//   return propCount;
+// }
+
+// console.log(countProps({})); //0
+// countProps({ name: "Mango", age: 2 }); //2
+// countProps({ mail: "poly@mail.com", isOnline: true, score: 500 }); //3
+
+// =13=
+
+// const apartment = {
+// 	descr: "Spacious apartment in the city center",
+// 	rating: 4,
+// 	price: 2153,
+//   };
+//   const values = [];
+//   // Change code below this line
+//   const keys = Object.keys(apartment);
+
+//   for (const key of keys){
+//    values.push(apartment[key]);
+
+//   }
+//   console.log(keys);
+//   console.log(values);
+
+// =14=
+
+// function countProps(object) {
+// 		// Change code below this line
+// 	return Object.keys(object).length
+// 	// Change code above this line
+//   }
+
+// console.log(countProps({}));//0
+// console.log(countProps({ name: "Mango", age: 2 }));//2
+// console.log(countProps({ mail: "poly@mail.com", isOnline: true, score: 500 }));//3
+
+// =15=
+
+// const apartment = {
+//   descr: "Spacious apartment in the city center",
+//   rating: 4,
+//   price: 2153,
+// };
+// // Change code below this line
+// const keys = Object.keys(apartment);
+// const values = Object.values(apartment);
+
+// console.log("Keys: ", keys);
+// console.log("Values: ", values);
+
+// =16=
+
+// function countTotalSalary(salaries) {
+//   let totalSalary = 0;
+//   // Change code below this line
+//   const nameSalary = Object.values(salaries);
+//   for (const item of nameSalary) {
+//     totalSalary += item;
+//   }
+
+//   // Change code above this line
+//   return totalSalary;
+// }
+
+// console.log(countTotalSalary({}));//0
+// console.log(countTotalSalary({ mango: 100, poly: 150, alfred: 80 }));//330
+// console.log(countTotalSalary({ kiwi: 200, poly: 50, ajax: 150 }));//400
+
+// =17=
+
+/**Перебери массив объектов colors используя цикл for...of. Добавь в массив hexColors значения свойств hex, а в массив rgbColors значения свойств rgb из всех объектов массива colors. */
+
+// const colors = [
+//   { hex: "#f44336", rgb: "244,67,54" },
+//   { hex: "#2196f3", rgb: "33,150,243" },
+//   { hex: "#4caf50", rgb: "76,175,80" },
+//   { hex: "#ffeb3b", rgb: "255,235,59" },
+// ];
+
+// const hexColors = [];
+// const rgbColors = [];
+
+// for (const color of colors) {
+//   hexColors.push(color.hex);
+//   rgbColors.push(color.rgb);
+// }
+// // Change code below this line
+
+// console.log(hexColors);
+// console.log(rgbColors);
+
+// =18=
+
+//*Напиши функцию getProductPrice(productName) которая принимает один параметр productName - название продукта. Функция ищет объект продукта с таким именем (свойство name) в массиве products и возвращает его цену (свойство price). Если продукт с таким названием не найден, функция должна возвращать null.
+
+// const products = [
+//   { name: "Radar", price: 1300, quantity: 4 },
+//   { name: "Scanner", price: 2700, quantity: 3 },
+//   { name: "Droid", price: 400, quantity: 7 },
+//   { name: "Grip", price: 1200, quantity: 9 },
+// ];
+
+// function getProductPrice(productName) {
+//   // Change code below this line
+
+//   for (const product of products) {
+//     if (product.name === productName) {
+//       return product.price;
+//     }
+//   }
+//   return null;
+//   // Change code above this line
+// }
+
+// // Change code above this line
+
+// console.log(getProductPrice("Radar")); //1300
+// console.log(getProductPrice("Grip")); // 1200
+// console.log(getProductPrice("Scanner")); //2700
+// console.log(getProductPrice("Droid")); //400
+// console.log(getProductPrice("Engine")); //null
+
+// =19=
+
+//*Напиши функцию getAllPropValues(propName) которая принимает один параметр propName - имя (ключ) свойства. Функция должна вернуть массив всех значений свойства с таким именем из каждого объекта в массиве products. Если в объектах нет свойства с таким именем, функция должна вернуть пустой массив.
+
+// const products = [
+//   { name: "Radar", price: 1300, quantity: 4 },
+//   { name: "Scanner", price: 2700, quantity: 3 },
+//   { name: "Droid", price: 400, quantity: 7 },
+//   { name: "Grip", price: 1200, quantity: 9 },
+// ];
+
+// function getAllPropValues(propName) {
+//   // Change code below this line
+//   let arrStart = [];
+//   for (const product of products) {
+//     let item = product[propName];
+//     // console.log(npq);
+//     if (item !== undefined) {
+//       arrStart.push(item);
+//     }
+//   }
+//   return arrStart;
+//   // Change code above this line
+// }
+
+// console.log(getAllPropValues("name")); //["Radar", "Scanner", "Droid", "Grip"]
+// console.log(getAllPropValues("quantity")); //[4, 3, 7, 9]
+// console.log(getAllPropValues("price")); //[1300, 2700, 400, 1200]
+// console.log(getAllPropValues("category")); //[]
+
+// =20=
+
+//*Напиши функцию calculateTotalPrice(productName) которая принимает один параметр productName - название товара. Функция должна вернуть общую стоимость (цена * количество) товара с таким именем из массива products.
+
+// const products = [
+//   { name: "Radar", price: 1300, quantity: 4 },
+//   { name: "Scanner", price: 2700, quantity: 3 },
+//   { name: "Droid", price: 400, quantity: 7 },
+//   { name: "Grip", price: 1200, quantity: 9 },
+// ];
+
+// function calculateTotalPrice(productName) {
+//   // Пиши код ниже этой строки
+//   let startPrice = 0;
+
+//   for (const product of products) {
+//     if (product.name === productName) {
+//       return product.price * product.quantity;
+//     }
+//   }
+//   return startPrice;
+//   // Пиши код выше этой строки
+// }
+
+// console.log(calculateTotalPrice("Blaster")); //0
+// console.log(calculateTotalPrice("Radar")); //5200
+// console.log(calculateTotalPrice("Droid")); //2800
+// console.log(calculateTotalPrice("Grip")); //10800
+// console.log(calculateTotalPrice("Scanner")); //8100
+
+// =21=
+
+// const highTemperatures = {
+//   yesterday: 28,
+//   today: 26,
+//   tomorrow: 33,
+// };
+// // Change code below this line
+
+// const { yesterday, today, tomorrow } = highTemperatures;
+
+// // Change code above this line
+// const meanTemperature = (yesterday + today + tomorrow) / 3;
+
+// console.log(yesterday); //28
+// console.log(tomorrow); //33
+// console.log(meanTemperature); //29
+
+// =22=
+
+// const highTemperatures = {
+//   yesterday: 28,
+//   today: 26,
+//   tomorrow: 33,
+// };
+// // Change code below this line
+
+// const {
+//   yesterday,
+//   today,
+//   tomorrow,
+//   icon = "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg",
+// } = highTemperatures;
+
+// // Change code above this line
+// const meanTemperature = (yesterday + today + tomorrow) / 3;
+
+// =23=
+
+//*Замени объявления переменных highYesterday, highToday, highTomorrow и highIcon одной операцией деструктуризации свойств объекта highTemperatures. Задай значение по умолчанию для highIcon - строку "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg".
+
+// const highTemperatures = {
+//   yesterday: 28,
+//   today: 26,
+//   tomorrow: 33,
+// };
+// // Change code below this line
+// const {
+//   yesterday: highYesterday,
+//   today: highToday,
+//   tomorrow: highTomorrow,
+//   icon: highIcon = "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg",
+// } = highTemperatures;
+
+// // Change code below this line
+// // ================єто било
+// // const highYesterday = highTemperatures.yesterday;
+// // const highToday = highTemperatures.today;
+// // const highTomorrow = highTemperatures.tomorrow;
+// // const highIcon = highTemperatures.icon;
+// //const meanTemperature = (highYesterday + highToday + highTomorrow) / 3;
+// // =====================єто било
+// // Change code above this line
+
+// // Change code above this line
+// const meanTemperature = (highYesterday + highToday + highTomorrow) / 3;
+
+// console.log(highTemperatures);
+
+//* чтоби деструктуризировать надо написать по новой в деструктуризации//
+
+// =24=
+
+// const colors = [
+//   { hex: "#f44336", rgb: "244,67,54" },
+//   { hex: "#2196f3", rgb: "33,150,243" },
+//   { hex: "#4caf50", rgb: "76,175,80" },
+//   { hex: "#ffeb3b", rgb: "255,235,59" },
+// ];
+
+// const hexColors = [];
+// const rgbColors = [];
+// // Change code below this line
+
+// for (const { hex, rgb } of colors) {
+//   hexColors.push(hex);
+//   rgbColors.push(rgb);
+// }
+
+// console.log(hexColors);
+// console.log(rgbColors);
+
+// =25=
+
+// const forecast = {
+//   today: {
+//     low: 28,
+//     high: 32,
+//     icon: "https://www.flaticon.com/svg/static/icons/svg/861/861059.svg",
+//   },
+//   tomorrow: {
+//     low: 27,
+//     high: 31,
+//   },
+// };
+// // =========деструктуризация
+// const {
+//   today: {
+//     low: lowToday,
+//     high: highToday,
+//     icon: todayIcon = "https://www.flaticon.com/svg/static/icons/svg/861/861059.svg",
+//   },
+//   tomorrow: {
+//     low: lowTomorrow,
+//     high: highTomorrow,
+//     icon: tomorrowIcon = "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg",
+//   },
+// } = forecast;
+
+// // Change code below this line
+
+// console.log(highToday); //32
+// console.log(lowToday); //28
+// console.log(todayIcon); //"https://www.flaticon.com/svg/static/icons/svg/861/861059.svg"
+// console.log(highTomorrow); //31
+// console.log(tomorrowIcon); //"https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg"
+
+// =26=
+
+// Change code below this line
+// function calculateMeanTemperature(forecast) {
+//   const {
+//     today: { low: todayLow, high: todayHigh },
+//     tomorrow: {low: tomorrowLow, high:tomorrowHigh },
+//   } = forecast;
+
+//   return (todayLow + todayHigh + tomorrowLow + tomorrowHigh) / 4;
+// }
+
+// console.log(
+//   calculateMeanTemperature({
+//     today: { low: 28, high: 32 },
+//     tomorrow: { low: 25, high: 29 },
+//   })
+// );
+
+// =27=
+//*В переменной scores хранится массив результатов тестирования. Используя распыление и методы Math.max() и Math.min() дополни код так, чтобы в переменной bestScore был самый высокий балл, а в worstScore самый низкий.
+
+// const scores = [89, 64, 42, 17, 93, 51, 26];
+// // Change code below this line
+// const bestScore = Math.max(...scores);
+// const worstScore = Math.min(...scores);
+
+// console.log(bestScore);
+// console.log(worstScore);
+
+// =28=
+
+//*В переменных firstGroupScores, secondGroupScores и thirdGroupScores хранятся результаты тестирования отдельных групп. Используя распыление дополни код так, чтобы:
+
+// В переменной allScores хранился массив всех результатов от первой до третьей группы.
+// В переменной bestScore был самый высокий общий балл.
+// В переменной worstScore был самый низкий общий балл.
+
+// const firstGroupScores = [64, 42, 93];
+// const secondGroupScores = [89, 14, 51, 26];
+// const thirdGroupScores = [29, 47, 18, 97, 81];
+// // Change code below this line
+// const allScores = [...firstGroupScores,...secondGroupScores,...thirdGroupScores];
+// const bestScore = Math.max(...allScores);
+// const worstScore = Math.min(...allScores);
+
+// console.log(bestScore);//97
+// console.log(worstScore );//14
+// console.log(thirdGroupScores);//[29, 47, 18, 97, 81]
+
+// =29=
+
+
+//* В конструкторе можно создавать новые тесты, для которых есть настройки по умолчанию которые хранятся в переменной defaultSettings. Во время создания теста, все или часть настроек можно переопределить, они хранятся в переменной overrideSettings.
+
+//* Для того чтобы получить финальные настройки теста, необходимо взять настройки по умолчанию и поверх них применить переопределённые настройки. Дополни код так, чтобы в переменной finalSettings получился объект финальных настроек теста.
+
+// const defaultSettings = {
+//   theme: "light",
+//   public: true,
+//   withPassword: false,
+//   minNumberOfQuestions: 10,
+//   timePerQuestion: 60,
+// };
+// const overrideSettings = {
+//   public: false,
+//   withPassword: true,
+//   timePerQuestion: 30,
+// };
+// // Change code below this line
+// const finalSettings = {...defaultSettings,...overrideSettings,};
+
+// console.log(finalSettings.theme);// "light"
+// console.log(finalSettings.public);//"false"
+// console.log(finalSettings.withPassword);//'true
+// console.log(finalSettings.minNumberOfQuestions);//10
+// console.log(finalSettings.timePerQuestion);//30
+
+
+// =30=
+// Напиши функцию makeTask(data) которая принимает один параметр data - объект со следующими свойствами.
+
+// text - текст задачи.
+// category - категория задачи.
+// priority - приоритет задачи.
+// Функция должна составить и вернуть новый объект задачи, не изменяя напрямую параметр data. В новом объекте должно быть свойство completed, значение которого хранится в одноимённой локальной переменной.
+
+// В параметре data гарантированно будет только свойство text, а остальные два, category и priority, могут отсутствовать. Тогда, в новом объекте задачи, в свойствах category и priority должны быть значения по умолчанию, хранящиеся в одноимённых локальных переменных.
+
+
+
+function makeTask(data) {
+	const completed = false;
+	const category = 'General';
+	const priority = 'Normal';
+	// Change code below this line
+  
+	// Change code above this line
+  }
+  
+
+
+  console.log(makeTask({}));//{ category: "General", priority: "Normal", completed: false }
+  console.log(makeTask({ category: "Homemade", priority: "Low", text: "Take out the trash" }));//{ category: "Homemade", priority: "Low", text: "Take out the trash", completed: false }
+
+  console.log(makeTask({ category: "Finance", text: "Take interest" }));//{ category: "Finance", priority: "Normal", text: "Take interest", completed: false }
+
+  console.log(makeTask({ priority: "Low", text: "Choose shampoo" }));
