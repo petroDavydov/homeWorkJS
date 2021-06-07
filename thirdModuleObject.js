@@ -149,23 +149,22 @@
 
 //* можно использовать результат Object.entries()
 
-// const cars = {
-// 	carName: 'Nisan',
-// 	while: 1,
-// 	sit: 4,
-// 	belt: 5,
-// 	motor: 1,
+const cars = {
+  carName: "Nisan",
+  while: 1,
+  sit: 4,
+  belt: 5,
+  motor: 1,
+};
 
-// };
+const entriesCar = Object.entries(cars);
 
-// const entriesCar = Object.entries(cars);
+for (const insideCar of entriesCar) {
+  const keyCar = insideCar[0];
+  const valueCar = insideCar[1];
 
-// for (const insideCar of entriesCar) {
-// 	const keyCar = insideCar[0];
-// 	const valueCar = insideCar[1];
-
-// 	console.log(`${keyCar}: ${valueCar}`);
-// };
+  console.log(`${keyCar}: ${valueCar}`);
+}
 
 //**Задача пример */
 
@@ -724,6 +723,7 @@
 //   getItems() {
 //     return this.items;
 //   },
+
 //   add(product) {
 //     for (const item of this.items) {
 //       if (item.name === product.name) {
@@ -1095,17 +1095,17 @@
 //   icon: highIcon = "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg",
 // } = highTemperatures;
 
-// // Change code below this line
-// // ================єто било
-// // const highYesterday = highTemperatures.yesterday;
-// // const highToday = highTemperatures.today;
-// // const highTomorrow = highTemperatures.tomorrow;
-// // const highIcon = highTemperatures.icon;
-// //const meanTemperature = (highYesterday + highToday + highTomorrow) / 3;
-// // =====================єто било
-// // Change code above this line
+// Change code below this line
+// ================єто било
+// const highYesterday = highTemperatures.yesterday;
+// const highToday = highTemperatures.today;
+// const highTomorrow = highTemperatures.tomorrow;
+// const highIcon = highTemperatures.icon;
+//const meanTemperature = (highYesterday + highToday + highTomorrow) / 3;
+// =====================єто било
+// Change code above this line
 
-// // Change code above this line
+// Change code above this line
 // const meanTemperature = (highYesterday + highToday + highTomorrow) / 3;
 
 // console.log(highTemperatures);
@@ -1160,7 +1160,7 @@
 //   },
 // } = forecast;
 
-// // Change code below this line
+// // // Change code below this line
 
 // console.log(highToday); //32
 // console.log(lowToday); //28
@@ -1220,7 +1220,6 @@
 
 // =29=
 
-
 //* В конструкторе можно создавать новые тесты, для которых есть настройки по умолчанию которые хранятся в переменной defaultSettings. Во время создания теста, все или часть настроек можно переопределить, они хранятся в переменной overrideSettings.
 
 //* Для того чтобы получить финальные настройки теста, необходимо взять настройки по умолчанию и поверх них применить переопределённые настройки. Дополни код так, чтобы в переменной finalSettings получился объект финальных настроек теста.
@@ -1246,7 +1245,6 @@
 // console.log(finalSettings.minNumberOfQuestions);//10
 // console.log(finalSettings.timePerQuestion);//30
 
-
 // =30=
 // Напиши функцию makeTask(data) которая принимает один параметр data - объект со следующими свойствами.
 
@@ -1257,22 +1255,243 @@
 
 // В параметре data гарантированно будет только свойство text, а остальные два, category и priority, могут отсутствовать. Тогда, в новом объекте задачи, в свойствах category и priority должны быть значения по умолчанию, хранящиеся в одноимённых локальных переменных.
 
+// function makeTask(data) {
+//   const completed = false;
+//   const category = "General";
+//   const priority = "Normal";
+//   // Change code below this line
 
+//   const newData = { ...{ completed, category, priority }, ...data }; // работает в боте
+//   // const newData = {...{data}, ...data};//работает и в консоли
 
-function makeTask(data) {
-	const completed = false;
-	const category = 'General';
-	const priority = 'Normal';
-	// Change code below this line
-  
-	// Change code above this line
-  }
-  
+//   return newData;
 
+//   // Change code above this line
+// }
 
-  console.log(makeTask({}));//{ category: "General", priority: "Normal", completed: false }
-  console.log(makeTask({ category: "Homemade", priority: "Low", text: "Take out the trash" }));//{ category: "Homemade", priority: "Low", text: "Take out the trash", completed: false }
+// console.log(makeTask({})); //{ category: "General", priority: "Normal", completed: false }
+// console.log(
+//   makeTask({
+//     category: "Homemade",
+//     priority: "Low",
+//     text: "Take out the trash",
+//   })
+// ); //{ category: "Homemade", priority: "Low", text: "Take out the trash", completed: false }
 
-  console.log(makeTask({ category: "Finance", text: "Take interest" }));//{ category: "Finance", priority: "Normal", text: "Take interest", completed: false }
+// console.log(makeTask({ category: "Finance", text: "Take interest" })); //{ category: "Finance", priority: "Normal", text: "Take interest", completed: false }
 
-  console.log(makeTask({ priority: "Low", text: "Choose shampoo" }));
+// console.log(makeTask({ priority: "Low", text: "Choose shampoo" }));
+
+// =31=
+
+// // Change code below this line
+// function add(...args) {
+//   // Change code above this line
+//   let total = 0;
+//   for (let i = 0; i < args.length; i += 1) {
+//     total += args[i];
+//   }
+//   return total;
+// }
+
+// =32=
+
+// Change code below this line
+// function addOverNum(value, ...args) {
+//   let total = 0;
+
+//   for (const arg of args) {
+//     if (arg > value)
+// 		total += arg;
+//   }
+
+//   return total;
+//   // Change code above this line
+// }
+
+// console.log(addOverNum(10, 12, 4, 11, 48, 10, 8)); //71
+// console.log(addOverNum(15, 32, 6, 13, 19, 8)); // 51
+// console.log(addOverNum(20, 74, 11, 62, 46, 12, 36)); //218
+
+// =33=
+
+// Функция findMatches() принимает произвольное количество аргументов. Первым аргументом всегда будет массив чисел, а остальные аргументы будут просто числами.
+
+// Дополни код функции так, чтобы она возвращала новый массив matches, в котором будут только те аргументы, начиная со второго, которые есть в массиве первого аргумента.
+
+// Например, findMatches([1, 2, 3, 4, 5], 1, 8, 2, 7) должна вернуть массив [1, 2], потому что только они есть в массиве первого аргумента.
+
+//* необходимо добавить arr,...args, в скобки для того чтоби полностью дополнить функцию.
+// function findMatches(arr, ...args) {
+// 	const matches = []; // Don't change this line
+
+// function findMatches(arr, ...args) {
+//   const matches = []; // Don't change this line
+
+//   for (let arg of args) {
+//     if (arr.includes(arg)) {
+//       matches.push(arg);
+//     }
+//   }
+//   // Change code above this line
+//   return matches;
+// }
+
+// console.log(findMatches([1, 2, 3, 4, 5], 1, 8, 2, 7));
+// console.log(findMatches([4, 89, 17, 36, 2], 8, 17, 89, 27, 2));
+// console.log(findMatches([10, 24, 41, 6, 9, 19], 24, 11, 9, 23, 41));
+// console.log(findMatches([63, 11, 8, 29], 4, 7, 16));
+
+// =34=
+
+// Добавь объекту bookShelf ещё два метода, которые пока что будут возвращать просто строки по аналогии с getBooks() и addBook(bookName).
+
+// Метод removeBook(bookName) будет удалять книгу по имени. Возвращает строку "Deleting book <имя книги>", где <имя книги> это значение параметра bookName.
+
+// Метод updateBook(oldName, newName) будет обновлять название книги на новое. Возвращает строку "Updating book <старое имя> to <новое имя>", где <старое имя> и <новое имя>это значения параметров oldName и newName соотвественно.
+
+// const bookShelf = {
+//   // Change code below this line
+//   books: ["The last kingdom", "The guardian of dreams"],
+//   getBooks() {
+//     return "Returning all books";
+//   },
+//   addBook(bookName) {
+//     return `Adding book ${bookName}`;
+//   },
+//   removeBook(bookName) {
+//     const { itemBook } = this;//// протупил, разобрался в методе, он не обязателен
+//     for (let i = 0; i < itemBook; i += 1) {
+//       item += itemBook[i];
+//       if (bookName === item.name) {
+//         item.splice(i, 1);
+//       }
+//     }
+//     return `Deleting book ${bookName}`;
+//   },
+
+//   updateBook(oldName, newName) {
+//     return `Updating book ${oldName} to ${newName}`;
+//   },
+// };
+
+// console.log(bookShelf.getBooks());
+// console.log(bookShelf.addBook("Haze"));
+// console.log(bookShelf.removeBook("Red sunset"));
+// console.log(bookShelf.updateBook("Sands of dune", "Dune"));
+
+// =35=
+
+// Дополни метод updateBook(oldName, newName) так, чтобы он изменял название книги с oldName на newName в свойстве books. Используй indexOf() для того, чтобы найти нужный элемент массива, и splice() для того чтобы заменить этот элемент
+
+// const bookShelf = {
+//   books: ["The last kingdom", "Haze", "The guardian of dreams"],
+//   updateBook(oldName, newName) {
+//     // Change code below this line
+//     const bookName = this.books.indexOf(oldName);
+//     this.books.splice(bookName, 1, newName);
+
+//     return this.books;
+
+//     // Change code above this line
+//   },
+// };
+
+// console.log(bookShelf.updateBook("Haze", "Dungeon chronicles")); //["The last kingdom", "Dungeon chronicles", "The guardian of dreams"]
+// console.log(bookShelf.updateBook("The last kingdom", "Dune")); //["Dune", "Haze", "The guardian of dreams"]
+
+// =36= to =40=
+
+// const atTheOldToad = {
+//   // Change code below this line
+//   potions: ["Speed potion", "Dragon breath", "Stone skin"],
+
+//   getPotions() {
+//     return this.potions;
+//   },
+
+//   addPotion(potionName) {
+//     return this.potions.push(potionName);
+//   },
+
+//   removePotion(potionName) {
+//     let delPot = this.potions.indexOf(potionName);
+//     this.potions.splice(delPot, 1);
+//     return this.potions; //  в боте не указивать
+//   },
+//   updatePotionName(oldName, newName) {
+//     // Change code below this line
+
+//     const upDatePoition = this.potions.indexOf(oldName);
+//     this.potions.splice(upDatePoition, 1, newName);
+//     return this.potions;
+//     // Change code above this line
+//   },
+//   // Change code above this line
+// };
+
+// console.log(atTheOldToad);
+// console.log(atTheOldToad.getPotions());
+// console.log(atTheOldToad.addPotion("Invisibility"));
+// console.log(atTheOldToad.addPotion("Power potion"));
+// console.log(atTheOldToad.removePotion("Dragon breath")); //["Speed potion", Stone skin"]
+// console.log(atTheOldToad.updatePotionName("Dragon breath", "Polymorth"));
+
+// =41=
+
+// * Выполни рефакторинг методов объекта atTheOldToad так, чтобы они работали не с массивом строк, а с массивом объектов.
+// getPotions() - метод для получения всех зелий. Возвращает значение свойства potions.
+// addPotion(newPotion) - добавляет зелье newPotion (уже объект) в массив в свойстве potions.
+// removePotion(potionName) - удаляет объект зелья с именем potionName из массива в свойстве potions.
+// updatePotionName(oldName, newName) - обновляет свойство name объекта-зелья с названием oldName на newName в массиве potions.
+
+const atTheOldToad = {
+  potions: [
+    { name: "Speed potion", price: 460 },
+    { name: "Dragon breath", price: 780 },
+    { name: "Stone skin", price: 520 },
+  ],
+  // Change code below this line
+  getPotions() {
+    return this.potions;
+  },
+  addPotion(potionName) {
+    if (this.potions.includes(potionName)) {
+      return `Potion ${potionName} is already equipped!`;
+    }
+    this.potions.push(potionName);
+  },
+  //   ===========================================!!!!!!!!!!!!!!!====================
+  removePotion(potionName) {
+    for (let i = 0; i < this.potions.length; i += 1) {
+      if (this.potions[i].name === potionName) {
+        this.potions.splice(i, 1);
+      }
+    }
+  },
+  //   =================================!!!!!!!!!!!!!!!!!========================
+  updatePotionName(oldName, newName) {
+    for (let item of this.potions) {
+      if (item.name === oldName) {
+        item.name = newName;
+      }
+    }
+  },
+  // Change code above this line
+};
+// ==============================!!!!!!!!!!!!!!!!!!=====================
+console.log(atTheOldToad.getPotions()); //[ { name: "Speed potion", price: 460 }, { name: "Dragon breath", price: 780 }, { name: "Stone skin", price: 520 } ]
+
+console.log(atTheOldToad.addPotion({ name: "Invisibility", price: 620 })); //в массиве potions последним элементом будет этот объект
+
+console.log(atTheOldToad.addPotion({ name: "Power potion", price: 270 })); //в массиве potions последним элементом будет этот объект
+
+console.log(atTheOldToad.removePotion("Dragon breath")); //[ { name: "Speed potion", price: 460 }, { name: "Stone skin", price: 520 } ]
+
+console.log(atTheOldToad.removePotion("Speed potion")); //[ { name: "Dragon breath", price: 780 }, { name: "Stone skin", price: 520 }]
+
+console.log(atTheOldToad.updatePotionName("Dragon breath", "Polymorth")); //[{ name: "Speed potion", price: 460 }, { name: "Polymorth", price: 780 }, { name: "Stone skin", price: 520 } ]
+
+console.log(
+  atTheOldToad.updatePotionName("Stone skin", "Invulnerability potion")
+); //[{ name: "Speed potion", price: 460 }, { name: "Dragon breath", price: 780 }, { name: "Invulnerability potion", price: 520 } ]
