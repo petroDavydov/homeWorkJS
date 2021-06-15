@@ -70,27 +70,35 @@
 // console.log(numbers);
 // console.log(doubleNumbers);
 
-
 // ! ПЕРЕБЕРАЮЩИЕ МЕТОДИ МАСИВА
 
+//* =forEach=
 
+// const numbers = [1, 2, 3];
 
+// numbers.forEach(num => console.log(num));
 
+// // Указываем параметр idx если нужен доступ к счетчику
+// numbers.forEach((num, idx) => console.log(`index ${idx}, value ${num}`));
 
+//* =map()=
 
+const numbers = [1, 2, 3];
 
+const doubledNumbers = numbers.map((num) => num * 2);
+console.log(doubledNumbers); // [2, 4, 6]
 
+// ==
 
+//* Используем map чтобы пройти по базе данных users и получить массив всех имен пользователей.
 
+const users = [
+  { name: "Mango", isActive: true },
+  { name: "Poly", isActive: false },
+  { name: "Ajax", isActive: true },
+];
 
-
-
-
-
-
-
-
-
-
-
+// Для каждого элемента коллекции (user) вернем значение поля name
+const names = users.map(user => user.name);
+console.log(names); // ["Mango", "Poly", "Ajax"]
 
