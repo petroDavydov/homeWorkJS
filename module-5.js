@@ -377,6 +377,10 @@
 //   }
 
 // =4=
+//*Добавь в свойство prototype функции-конструктора Car два метода:
+
+//* getPrice() - возвращает значение свойства price из объекта который его будет вызывать.
+//* changePrice(newPrice) - обновляет значение свойства price у объекта который его будет вызывать на newPrice.
 
 // function Car({brand, model, price}) {
 // 	this.brand = brand;
@@ -400,11 +404,6 @@
 //   };
 
 // =6=
-
-//*Добавь в свойство prototype функции-конструктора Car два метода:
-
-//* getPrice() - возвращает значение свойства price из объекта который его будет вызывать.
-//* changePrice(newPrice) - обновляет значение свойства price у объекта который его будет вызывать на newPrice.
 
 // function Storage(items) {
 //   this.items = items;
@@ -441,28 +440,28 @@
 //* padStart(str) - получает парметр str (строку) и добавляет её в начало значения свойства value объекта, который вызывает этот метод.
 //* padBoth(str) - получает парметр str (строку) и добавляет её в начало и в конец значения свойства value объекта, который вызывает этот метод.
 
-// function StringBuilder(baseValue) {
-//   this.value = baseValue;
-// }
+function StringBuilder(baseValue) {
+  this.value = baseValue;
+}
 
-// StringBuilder.prototype.getValue = function () {
-//   return this.value;
-// };
+StringBuilder.prototype.getValue = function () {
+  return this.value;
+};
 
-// StringBuilder.prototype.padStart = function (str) {
-//   return (this.value = this.value.padStart(2, str));
-//   // console.log(value);
-// };
+StringBuilder.prototype.padStart = function (str) {
+  return (this.value = this.value.padStart(2, str));
+  // console.log(value);
+};
 
-// StringBuilder.prototype.padEnd = function (str) {
-//   return (this.value = this.value.padEnd(3, str));
-//   // console.log(value);
-// };
+StringBuilder.prototype.padEnd = function (str) {
+  return (this.value = this.value.padEnd(3, str));
+  // console.log(value);
+};
 
-// StringBuilder.prototype.padBoth = function (str) {
+StringBuilder.prototype.padBoth = function (str) {
 
-//   return this.value = str + this.value + str; // console.log(value);
-// };
+  return this.value = str + this.value + str; // console.log(value);
+};
 
 // // Пиши код выше этой строки
 // const builder = new StringBuilder(".");
