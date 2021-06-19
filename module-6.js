@@ -1818,7 +1818,7 @@
 // const playtimes = Object.values(players); // [1270, 468, 710, 244]
 // // Пиши код ниже этой строки
 
-// const totalPlayTime = playtimes.reduce((acc, number) => acc + number);
+// const totalPlayTime = playtimes.													((acc, number) => acc + number);
 
 // // Пиши код выше этой строки
 // const averagePlayTime = totalPlayTime / playtimes.length;
@@ -2236,8 +2236,10 @@ const users = [
 
 // Пиши код ниже этой строки
 const getSortedFriends = (users) => {
-  return [...users].flatMap((user) => user.friends).filter((friends,index,users)=>users.indexOf(friends)===index).sort()
-  
+  return [...users]
+    .flatMap((user) => user.friends)
+    .filter((friends, index, users) => users.indexOf(friends) === index)
+    .sort();
 };
 console.log(getSortedFriends(users));
 // answer for 43:
@@ -2245,9 +2247,12 @@ console.log(getSortedFriends(users));
 
 //* Дополни функцию getTotalBalanceByGender(users, gender) так, чтобы она возвращала общий баланс пользователей (свойство balance), пол которых (свойство gender) совпадает со значением параметра gender.
 
-
 // Пиши код ниже этой строки
 const getTotalBalanceByGender = (users, gender) => {
-   
+  return [...users]
+    .filter((user) => user.gender === gender)
+    .reduce((acc, user) => acc + user.balance, 0);
 };
 // Пиши код выше этой строки
+
+console.log(getSortedFriends(users.gender(male)));
