@@ -1691,15 +1691,18 @@
 //   },
 // ];
 
-// // Пиши код ниже этой строки
-// const isEveryUserActive = (users) => {
-//   let isActiveResult = users.every((user) => user.isActive);
-//   // return isActiveResult
-//   console.log(isActiveResult);
-// };
-// // Пиши код выше этой строки
+// Пиши код ниже этой строки
+const isEveryUserActive = (users) => {
+  let isActiveResult = users.every((user) => user.isActive);
+  // return isActiveResult
+  console.log(isActiveResult);
+};
+// 2 variant
+// const isEveryUserActive=(users) => users.every((user) => user.isActive);
 
-// isEveryUserActive(users);
+// Пиши код выше этой строки
+
+isEveryUserActive(users);
 
 // =28=
 
