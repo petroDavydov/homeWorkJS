@@ -7,3 +7,26 @@ h1{
 	padding: 20px;
 
 }
+
+body {
+	padding: 1rem;
+  }
+  
+  .article {
+	width: 320px;
+	margin-bottom: 32px;
+  }
+  
+  .article-text {
+	color: #F26419;
+  }
+
+  /** Действия браузера по умолчанию  */
+
+
+  .form {
+	max-width: 600px;
+	margin: 0 auto;
+	text-align: center;
+	padding: 32px;
+  }
