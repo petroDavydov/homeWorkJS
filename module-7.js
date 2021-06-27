@@ -223,9 +223,9 @@ function logMessage({ type, key, code }) {
 
 //! Видео Репета
 
-const category = document.querySelector('#categories')
+const category = document.querySelector("#categories");
 console.log(category);
-category.textContent
+category.textContent;
 console.log(category.textContent);
-category.classList.contains("li")
+category.classList.contains("li");
 console.log(category);
