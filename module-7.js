@@ -220,12 +220,3 @@ function logMessage({ type, key, code }) {
 }
 
 // xxxxxxxxxxxxxxxxxxxxxxxxxx
-
-//! Видео Репета
-
-const category = document.querySelector("#categories");
-console.log(category);
-category.textContent;
-console.log(category.textContent);
-category.classList.contains("li");
-console.log(category);
