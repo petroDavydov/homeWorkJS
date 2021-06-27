@@ -24,7 +24,7 @@ const htmlString = `<p class="article-text">Nullam quis ante. Vestibulum dapibus
 // Уберите += и поставьте =, видите результат? заголовок удаляется,
 // еще раз перечитайте сноску о работе innerHTML, о том как содержимое перезаписывается
 // Если необходимо добавить к уже существующей разметке, то используем +=
-article.innerHTML += htmlString;
+// article.innerHTML += htmlString; -по фидео Репети не юзать
 
 // Можно делать множественные вставки, для этого мы конкатенируем
 // всю необходимую разметку в одну строку, после чего присваиваем ее
@@ -177,7 +177,7 @@ function handleSubmit(event) {
     return alert("Пожалуйста введите валидную информацию!");
   }
 
-  if ((login === "козел" && password === "1111") || nameIn === "козел") {
+  if (login === "козел" || password === "1111" || nameIn === "козел") {
     alert(" Сам такой!");
   } // :)
 
@@ -193,3 +193,39 @@ function handleSubmit(event) {
     Пароль: ${password}
   `);
 }
+
+//** xxx KeyboardEvent.key и KeyboardEvent.code xxx
+
+const clearLogBtn = document.querySelector('button[data-action="clear"]');
+const logList = document.querySelector(".log-list");
+
+window.addEventListener("keydown", logMessage);
+window.addEventListener("keyup", logMessage);
+// window.addEventListener("click", logMessage); // я дописал
+
+clearLogBtn.addEventListener("click", (e) => {
+  logList.innerHTML = "";
+});
+
+function logMessage({ type, key, code }) {
+  const message = document.createElement("section");
+  const title = document.createElement("h2");
+  title.textContent = `${type} event`;
+
+  const text = document.createElement("p");
+  text.textContent = `key value is ${key} | code value is ${code}`;
+
+  message.append(title, text);
+  logList.append(message);
+}
+
+// xxxxxxxxxxxxxxxxxxxxxxxxxx
+
+//! Видео Репета
+
+const category = document.querySelector('#categories')
+console.log(category);
+category.textContent
+console.log(category.textContent);
+category.classList.contains("li")
+console.log(category);

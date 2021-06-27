@@ -30,3 +30,41 @@ body {
 	text-align: center;
 	padding: 32px;
   }
+
+  /** xxx KeyboardEvent.key и KeyboardEvent.code xxx */
+
+
+  body {
+	font-family: 'Roboto', sans-serif;
+  }
+  
+  .container {
+	display: flex;
+	flex-direction: column;
+  text-align: center;
+	margin: 0 auto;
+	max-width: 400px;
+  }
+  
+  .log-list {
+	margin-top: 16px;
+  }
+  
+  .log-list section {
+	margin-bottom: 16px;
+  }
+  
+  .log-list h2 {
+	font-weight: 500;
+	margin: 0;
+	font-size: 18px;
+	margin-bottom: 8px;
+  }
+  
+  .log-list p {
+	margin: 0;
+  }
+  
+  button {
+	cursor: pointer;
+	font-family: inherit;
